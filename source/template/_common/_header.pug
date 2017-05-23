@@ -1,0 +1,18 @@
+header.header
+    .slider
+        .slider-inner
+            -
+                var items = [
+                        "./assets/img/slide_1.jpg",
+                        "./assets/img/slide_2.jpg",
+                        "./assets/img/slide_3.jpg"
+                    ]
+            ul#bxslider.slider__list
+                each item in items
+                    li.slider__item
+                        img.slider__img( src="" + item alt="slide_1")
+                        .slider__item-content
+                            +heading-text()
+                            a.btn(href="#")
+                                | Get started
+        include ./_navigation

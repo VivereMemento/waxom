@@ -1,0 +1,10 @@
+.brands {
+	padding: 135px 0;
+	background: url(../img/brands_bg.jpg) no-repeat top left;
+	background-size: cover;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+}

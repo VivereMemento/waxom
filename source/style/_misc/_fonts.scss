@@ -1,0 +1,40 @@
+// Raleway
+
+@font-face {
+	@include fonts('../fonts/Raleway/raleway-medium-webfont', 'raleway-medium');
+}
+
+@font-face {
+	@include fonts('../fonts/Raleway/raleway-regular-webfont', 'raleway-regular');
+}
+
+@font-face {
+	@include fonts('../fonts/Raleway/raleway-bold-webfont', 'raleway-bold');
+}
+@font-face {
+	@include fonts('../fonts/Raleway/raleway-semibold-webfont', 'raleway-semibold');
+}
+
+@font-face {
+	@include fonts('../fonts/Raleway/raleway-extrabold-webfont', 'raleway-extrabold');
+}
+
+// Montserrat
+
+@font-face {
+	@include fonts('../fonts/Montserrat/montserrat-light-webfont', 'montserrat-light');
+}
+
+@font-face {
+	@include fonts('../fonts/Montserrat/montserrat-regular-webfont', 'montserrat-regular');
+}
+
+@font-face {
+	@include fonts('../fonts/Montserrat/montserrat-thin-webfont', 'montserrat-thin');
+}
+
+// Roboto
+
+@font-face {
+	@include fonts('../fonts/roboto/roboto-regular-webfont', 'roboto-regular');
+}

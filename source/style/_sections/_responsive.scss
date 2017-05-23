@@ -1,0 +1,68 @@
+.responsive {
+    padding-top: 80px;
+    background: #fbfaf8;
+
+    &__content {
+        padding-top: 116px;
+        padding-bottom: 180px;
+        text-align: left;
+        background: url(../img/iphone.png) no-repeat bottom left 40px;
+        background-size: 35% 85%;
+        display: flex;
+        justify-content: flex-end;
+
+        @include tablets {
+            padding-top: 0;
+            padding-bottom: 80px;
+            
+        }
+
+        @include phones {
+            background: none;
+        }
+    }
+
+    &__content-inner {
+        max-width: 660px;
+    }
+
+    &__tittle_mods {
+        text-align: left;
+    }
+
+    &__sub-tittle_mods {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+    &__list {
+        margin-top: 46px;
+        margin-left: 50px;
+
+        @include phones {
+            margin-left: 0;
+        }
+    }
+
+    &__item {
+        margin-bottom: 10px;
+        padding-left: 50px;
+        font-family: $ML;
+        color: $gray-light;
+        line-height: 32px;
+        position: relative;
+
+        &:before {
+            display: inline-block;
+            content: '';
+            width: 21px;
+            height: 21px;
+            background: url(../img/list-arrow.png) no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            top: 6px;
+            left: 0;
+        }
+    }
+}

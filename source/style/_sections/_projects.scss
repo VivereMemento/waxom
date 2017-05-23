@@ -1,0 +1,101 @@
+.projects {
+    padding: 80px 0;
+    text-align: center;
+
+    &__list {
+        margin-top: 40px;
+        margin-bottom: -30px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 0;
+    }
+
+    &__item {
+        width: 30%;
+        margin-bottom: 30px;
+
+        @include phones {
+            width: 100%;
+        }
+
+        &:hover {
+            .projects__content {
+                background: #362f2d;
+
+                &:after {
+                    border-color: transparent transparent #362f2d transparent;
+                }
+
+                &-tittle {
+                    color: #fff;
+                }
+
+                &-desc {
+                    color: #c7b299;
+                }
+            }
+        }
+
+        &:hover .projects__img-zoom:after {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__img-zoom {
+        overflow: hidden;
+        position: relative;
+
+        &:after {
+            display: block;
+            content: '';
+            width: 0%;
+            height: 0%;
+            margin: auto;
+            background: fade-out(#362f2d, .8) url(../img/zoom.svg) no-repeat center center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transition: .3s;
+        }
+    }
+
+    &__content {
+        padding: 30px;
+        text-align: left;
+        background: #fbfaf8;
+        position: relative;
+
+        &:after {
+            display: block;
+            content: '';
+            @include arr(30, 10, #fbfaf8, t);
+            position: absolute;
+            top: -10px;
+            left: 19px;
+        }
+
+        &-tittle {
+            margin-bottom: 14px;
+            font: 20px/22px RWM;
+            color: #c7b299;
+            text-transform: capitalize;
+        }
+
+        &-desc {
+            font: 14px/16px $ML;
+            color: #d1d1d1;
+        }
+    }
+
+    &__btn {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,56 @@
+.statistic {
+    padding-top: 69px;
+    padding-bottom: 60px;
+    text-align: center;
+    background: #f4f5f8 linear-gradient(to right, #211b19 0%, #4e3427 100%);
+
+    &__img {
+        width: 54px;
+        height: 44px;
+        fill: #c8b39a;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 19%;
+        position: relative;
+
+        @include phones {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+
+        &:after {
+            display: block;
+            content: '';
+            width: 30px;
+            height: 2px;
+            margin: 0 auto;
+            margin-top: 30px;
+            background: #fff;
+        }
+    }
+
+    &__count {
+        margin-top: 30px;
+        font: 48px/50px $MT;
+        color: #ffffff;
+    }
+
+    &__name {
+        margin-top: 21px;
+        font: 14px/16px $ML;
+        color: #c7b299;
+        text-transform: uppercase;
+    }
+}

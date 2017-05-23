@@ -1,0 +1,155 @@
+extends ../_template
+
+block variables
+  - var title = 'Home'
+
+block content
+    section.service
+        .container
+            +service-list()
+    section.realization
+        .container
+            .tittle
+                | Waxom is Realization of your Ideas.
+            +subtittles("realization")
+            .realization__img-wrap
+                img.realization__img(src="./assets/img/realization_bg.png", alt="cool-pic")
+        .realization__bottom
+            .container
+                .realization__bottom-inner
+                    .realization__logo
+                        <span>Waxom</span> multipurpose WordPress theme
+                        .realization__logo-text 
+                            | Don't Forget to Rate the Template. Thanks so much!
+                    .realization__btn
+                        a.btn(href="#") Purchase now
+    section.projects
+        .container
+            .tittle
+                | Our latest projects.
+            +subtittles("projects")
+
+            .menu
+                -
+                    var tabs = [
+                            "All",
+                            "Web design",
+                            "Mobile app",
+                            "Illustration",
+                            "Photography",
+                        ]
+                +menu(tabs, "All", "menu_tabs")
+
+            ul.projects__list
+                -
+                    var projects = [
+                            {url: "./assets/img/project_1.jpg", tittle: "Claritas etiam erocessus", desc: "Photography, Nature"},
+                            {url: "./assets/img/project_2.jpg", tittle: "Claritas etiam erocessus", desc: "Photography, Nature"},
+                            {url: "./assets/img/project_3.jpg", tittle: "Claritas etiam erocessus", desc: "Photography, Nature"},
+                            {url: "./assets/img/project_4.jpg", tittle: "Claritas etiam erocessus", desc: "Photography, Nature"},
+                            {url: "./assets/img/project_5.jpg", tittle: "Claritas etiam erocessus", desc: "Photography, Nature"},
+                            {url: "./assets/img/project_6.jpg", tittle: "Claritas etiam erocessus", desc: "Photography, Nature"}
+                        ]
+                each item in projects
+                    li.projects__item
+                        a.projects__link(href="#")
+                            figure.projects__img-wrap
+                                .projects__img-zoom
+                                    img.projects__img(src="" + item.url)
+                                figcaption.projects__content
+                                    .projects__content-tittle #{item.tittle}
+                                    .projects__content-desc #{item.desc}
+
+            .projects__btn
+                a.btn(href="#") Load more
+
+    section.video
+        .video__inner
+            a.video__link(href="#")
+                svg.video__img
+                    use(xlink:href="./assets/img/sprite.svg#video")
+            .tittle.video__tittle_color
+                | Waxom video presentation
+            +subtittles("video")
+
+    section.responsive
+        .container
+            .responsive__content
+                .responsive__content-inner
+                    .tittle.responsive__tittle_mods
+                        | Excellent for mobile devices.
+                    +subtittles("responsive")
+                        
+                    -
+                        var tags = [
+                                "Nam liber tempor cum soluta nobis eleifend option;",
+                                "Option congue nihil imperdiet doming id quod mazim placerat facer;",
+                                "Eodem modo typi, qui nunc nobis videntur parum futurum;",
+                                "Investigationes demonstraverunt lectores"
+                            ]
+                    ul.responsive__list
+                        each tag in tags
+                            li.responsive__item #{tag}
+
+    section.statistic
+        .container
+            -
+                var items = [
+                        {url: "#client", count: "3587", name: "Satisfied clients"},
+                        {url: "#coffee", count: "207", name: "Cups of coffee"},
+                        {url: "#blog", count: "2500", name: "Blog posts"},
+                        {url: "#like", count: "873", name: "Likes"},
+                        {url: "#launch", count: "900", name: "We launched"}
+                    ]
+            ul.statistic__list
+                each item in items
+                    li.statistic__item
+                        svg.statistic__img
+                            use(xlink:href="./assets/img/sprite.svg" + item.url)
+                        .statistic__count
+                            | #{item.count}
+                        .statistic__name
+                            | #{item.name}
+
+    section.posts
+        .container
+            .tittle
+                | Recent posts.
+            +subtittles("posts")
+            .posts__slider
+                -
+                    var posts = [
+                            {url: "./assets/img/post_1.jpg", tittle: "Claritas etiam erocessus", desc: "Clarltas est etlam processus dynamicus, qui sequltur metatlonev consuetudium."},
+                            {url: "./assets/img/post_2.jpg", tittle: "Claritas etiam erocessus", desc: "Clarltas est etlam processus dynamicus, qui sequltur metatlonev consuetudium."},
+                            {url: "./assets/img/post_3.jpg", tittle: "Claritas etiam erocessus", desc: "Clarltas est etlam processus dynamicus, qui sequltur metatlonev consuetudium."},
+                            {url: "./assets/img/post_1.jpg", tittle: "Claritas etiam erocessus", desc: "Clarltas est etlam processus dynamicus, qui sequltur metatlonev consuetudium."},
+                            {url: "./assets/img/post_2.jpg", tittle: "Claritas etiam erocessus", desc: "Clarltas est etlam processus dynamicus, qui sequltur metatlonev consuetudium."},
+                            {url: "./assets/img/post_3.jpg", tittle: "Claritas etiam erocessus", desc: "Clarltas est etlam processus dynamicus, qui sequltur metatlonev consuetudium."}
+                        ]
+                ul#bxslider2.posts__list
+                    each item in posts
+                        li.posts__item
+                            figure.posts__img-wrap
+                                .posts__curtain
+                                    img.posts__img(src="" + item.url)
+                                    .posts__date
+                                        span.posts__date-number 30
+                                        span.posts__date-month Sep.
+                                figcaption.posts__content
+                                    .posts__content-tittle #{item.tittle}
+                                    .posts__content-desc #{item.desc}
+                                    a.posts__content-link(href="#") Read more
+
+    section.brands
+        .container
+            -
+                var brands = [
+                        "./assets/img/brand_1.png",
+                        "./assets/img/brand_2.png",
+                        "./assets/img/brand_3.png",
+                        "./assets/img/brand_4.png"
+                    ]
+            ul.brands__list
+                each brand in brands
+                    li.brands__item
+                        img.brands__img(src="" + brand)
