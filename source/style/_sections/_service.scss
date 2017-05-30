@@ -10,6 +10,9 @@
     &__item {
         width: 24%;
         text-align: center;
+        transform: translateX(-100px);
+        opacity: 0;
+        transition: all 1s;
 
         @include tablets {
             width: 49%
@@ -17,6 +20,29 @@
 
         @include phones {
             width: 100%
+        }
+    }
+
+    &.action {
+        .service__item:first-child {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .service__item:nth-child(2) {
+            transform: translateX(0);
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+        .service__item:nth-child(3) {
+            transform: translateX(0);
+            opacity: 1;
+            transition-delay: 1s;
+        }
+        .service__item:last-child {
+            transform: translateX(0);
+            opacity: 1;
+            transition-delay: 1.5s;
         }
     }
 

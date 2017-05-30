@@ -22,6 +22,10 @@ $black: #000000;
     color: $gray;
     text-align: center;
     text-transform: capitalize;
+
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 1s;
 }
 
 .sub-tittle {
@@ -30,6 +34,25 @@ $black: #000000;
     font-family: $ML;
     line-height: 28px;
     text-align: center;
+
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+section.action {
+    .tittle {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+section.action {
+    .sub-tittle {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: 0.5s;
+    }
 }
 
 .btn {
