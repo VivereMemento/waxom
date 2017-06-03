@@ -20,17 +20,17 @@ $.path.task.forEach(function(taskPath) {
 });
 
 $.gulp.task('default', $.gulp.series(
-  'clean',
+    'clean',
   $.gulp.parallel(
     'sass',
     'pug',
     'js:foundation',
     'js:process',
     'copy:image',
-	'copy:fonts',
+    'copy:fonts',
     'css:foundation',
     'sprite:svg',
-	'sprite:png'
+    'sprite:png'
   ),
   $.gulp.parallel(
     'watch',

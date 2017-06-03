@@ -3,14 +3,13 @@ header.header
         .slider-inner
             -
                 var items = [
-                        "./assets/img/slide_1.jpg",
-                        "./assets/img/slide_2.jpg",
-                        "./assets/img/slide_3.jpg"
+                        "slide_1",
+                        "slide_2",
+                        "slide_3"
                     ]
             ul#bxslider.slider__list
                 each item in items
-                    li.slider__item
-                        img.slider__img( src="" + item alt="slide_1")
+                    li(class="slider__item " + item)
                         .slider__item-content
                             +heading-text()
                             a.btn(href="#")
